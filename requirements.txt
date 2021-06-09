@@ -1,0 +1,5 @@
+flask
+pytest
+PyMongo
+requests
+pysafebrowsing

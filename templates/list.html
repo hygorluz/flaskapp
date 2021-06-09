@@ -1,0 +1,16 @@
+{% include 'incl/header.html' %}
+
+<div class="container">
+  <h2>List Safe Browsing Checks</h2>
+  Total: {{ count }}
+
+  {% for safebrowsing in safebrowsings %}
+
+  <div class="card">
+    <div class="card-body">
+      <a href="/safebrowsing/{{ safebrowsing._id }}">{{ safebrowsing.url }}</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% include 'incl/footer.html' %}

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "5001:5000"
+    volumes:
+    - .:/opt
+    links:
+    - flask_mongo
+  flask_mongo:
+    container_name: flask_mongo
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile
+    ports:
+      - 27017:27017

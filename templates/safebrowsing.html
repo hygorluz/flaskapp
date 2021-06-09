@@ -1,0 +1,31 @@
+{% include 'incl/header.html' %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <h4>{{ safebrowsing.url }}</h4>
+            </div>
+            <div class="row">
+                {% if safebrowsing.malicious == False %}
+                <div style="color:green;">
+                    Safe
+                </div>
+                {% else %}
+                <div style="color:red;">
+                    Unsafe
+                </div>
+                {% endif %}<br>
+                <div class="btn-group" style="max-width: 100px;">
+                    <a href="{{ safebrowsing.url }}" class="btn btn-primary" target="_blank">Link</a>
+                </div>
+            </div>
+            <div class="row">
+                <span class="d-flex justify-content-end me-2">{{ safebrowsing.created_at }}</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% include 'incl/footer.html' %}

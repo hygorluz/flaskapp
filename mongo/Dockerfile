@@ -2,7 +2,7 @@
 # Dockerfile for: MONGODB DATABASE
 ########################################################
 # How to run
-#  - docker-compose up -d georanker_mongo
+#  - docker-compose up -d flask_mongo
 # How to build
 #  - docker-compose build --no-cache
 ########################################################
